@@ -218,10 +218,12 @@ public class IdealWeightCalculator extends javax.swing.JFrame {
         //and indicated with different units
         switch(UnitOfMeasurement)
         {
+            //if the user is using metric measurements
             case "M":
                 weight = height * height * 25;
                 FinalOutput.setText(name + "'s ideal weight is: " + x.format(weight) + " kgs."); 
                 break;
+            //if the user is using imperial measurements
             case "I": 
                 weight = (height * height) * 25 / 703;
                 FinalOutput.setText(name + "'s ideal weight is: " + x.format(weight) + " lbs."); 
@@ -241,13 +243,17 @@ public class IdealWeightCalculator extends javax.swing.JFrame {
         DecimalFormat x = new DecimalFormat("###.##");
         
         //calculate the user's BMI based on their weight and height
+        //if the user is entering in values using the imperial system, 
+        //a conversion factor must be used (this is included in the equation)
         switch(UnitOfMeasurement)
         {
+            //if the user is using metric measurements
             case "M":
                 BMI = weight / height / height;
                 FinalOutput.setText(name + "'s body mass index is: " + x.format(BMI) + " kilogram meters-squared"); 
                 break;
-            case "I": 
+            //if the user is using imperial measurement
+            case "I":
                 BMI = weight / height / height * 703;
                 FinalOutput.setText(name + "'s body mass index is: " + x.format(BMI) + " kilogram meters-squared"); 
                 break;
