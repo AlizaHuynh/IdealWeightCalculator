@@ -240,7 +240,7 @@ public class IdealWeightCalculator extends javax.swing.JFrame {
         //decimal format for final weight rounded to two decimal places
         DecimalFormat x = new DecimalFormat("###.##");
         
-        //calculate the user's BMI based on their weight
+        //calculate the user's BMI based on their weight and height
         switch(UnitOfMeasurement)
         {
             case "M":
