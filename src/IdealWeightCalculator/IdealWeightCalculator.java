@@ -1,7 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Aliza Huynh
+ * IdealWeightCalculator.java
+ * This program takes the user's height and weight
+ * To find the user's ideal weight or BMI
  */
 
 package IdealWeightCalculator;
